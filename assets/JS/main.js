@@ -17,6 +17,12 @@ const getLocaStorage = () => {
 };
 const setlocaStorage = (dbClient) => localStorage.setItem("db_client",JSON.stringify(dbClient));
 
+const deleteClient = (index) => {
+    const dbClient = readClient();
+    dbClient.splice(index,1);
+    setlocaStorage(dbClient);
+}
+
 const updateClient = (index,client) => {
     const dbClient = readClient();
     dbClient[index] = client;
