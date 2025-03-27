@@ -5,7 +5,7 @@ const openModal = () => document.getElementById('modal').classList.add('active')
 const closeModal = () => document.getElementById('modal').classList.remove('active');
 
 const tempCliente = {
-    nome: "dyego",
+    nome: "nicoego",
     email: "dyego123@gmail.com",
     celular: "83912323490",
     cidade: "Mamanguape"
@@ -16,6 +16,14 @@ const getLocaStorage = () => {
     return Array.isArray(dbClient) ? dbClient : [];
 };
 const setlocaStorage = (dbClient) => localStorage.setItem("db_client",JSON.stringify(dbClient));
+
+const updateClient = (index,client) => {
+    const dbClient = readClient();
+    dbClient[index] = client;
+    setlocaStorage(dbClient);
+}
+
+const readClient = () => getLocaStorage();
 
 const createCliente = (client) => {
     const dbClient = getLocaStorage();
