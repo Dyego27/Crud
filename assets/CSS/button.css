@@ -89,7 +89,7 @@ button.red{
         height:50px;
         border-radius: 50%;
         position:fixed;
-        top: 100vh;
+        top: 70vh;
         left: 80vw;
     }
     .button.mobile::before{
