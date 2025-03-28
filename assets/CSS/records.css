@@ -5,7 +5,7 @@
 }
 
 .records th{
-    height: 30px;
+    height: 50px;
     background-color: var(--primary-color);
     padding-left: 20px;
     font-size: 1.2rem;    
@@ -34,6 +34,7 @@
         display:none;
     }
     .records tr{
+        displa:flex;
         box-shadow: 0 1px 3px var(--shadow-color);
     }
     .records td:not(:first-child){
